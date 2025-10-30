@@ -1,0 +1,20 @@
+[
+{
+"id": "apples-fuji",
+"title": "Fuji Apples",
+"unit": "lb",
+"quantity": 15,
+"price": 2.5,
+"description": "Crisp and sweet, unsprayed backyard tree.",
+"image": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce"
+},
+{
+"id": "eggs",
+"title": "Farm Eggs",
+"unit": "dozen",
+"quantity": 6,
+"price": 5.0,
+"description": "Free-range mixed flock.",
+"image": "https://images.unsplash.com/photo-1517959105821-eaf2591984ce"
+}
+]

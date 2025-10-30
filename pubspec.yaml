@@ -1,0 +1,20 @@
+name: produce_share
+description: Minimal buy-or-barter Flutter app runnable in GitHub Codespaces.
+publish_to: 'none'
+version: 0.1.0+1
+
+
+environment:
+sdk: '>=3.4.0 <4.0.0'
+
+
+dependencies:
+flutter:
+sdk: flutter
+url_launcher: ^6.3.0
+
+
+flutter:
+uses-material-design: true
+assets:
+- assets/produce.json
