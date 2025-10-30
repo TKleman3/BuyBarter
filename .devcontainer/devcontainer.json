@@ -1,17 +1,13 @@
 {
-"name": "Flutter Codespace",
-"build": {
-"dockerfile": "Dockerfile"
-},
-"customizations": {
-"vscode": {
-"extensions": [
-"Dart-Code.dart-code",
-"Dart-Code.flutter",
-"esbenp.prettier-vscode"
-]
-}
-},
-"postCreateCommand": "flutter --version && flutter doctor -v && flutter pub get",
-"remoteUser": "vscode"
+  "name": "Flutter in Codespaces",
+  "image": "ghcr.io/cirruslabs/flutter:stable",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Dart-Code.dart-code",
+        "Dart-Code.flutter"
+      ]
+    }
+  },
+  "postCreateCommand": "flutter --version && flutter config --enable-web && flutter pub get"
 }
