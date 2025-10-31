@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Chooses the right Image widget based on the string:
-/// - http/https -> network
-/// - empty/null  -> placeholder
-/// - anything else -> asset (e.g., "assets/images/eggs.jpg")
 class SmartImage extends StatelessWidget {
   final String? src;
   final double size;
@@ -14,16 +10,47 @@ class SmartImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final s = (src ?? '').trim();
+
+    // 1️⃣ Nothing provided — show placeholder immediately
     if (s.isEmpty) {
-      // Optional placeholder – change or remove as you like
-      return Image.asset('assets/images/placeholder.png',
-          width: size, height: size, fit: fit);
+      return _placeholder();
     }
+
+    // 2️⃣ Remote image (http/https)
     if (s.startsWith('http://') || s.startsWith('https://')) {
-      return Image.network(s, width: size, height: size, fit: fit);
+      return Image.network(
+        s,
+        width: size,
+        height: size,
+        fit: fit,
+        errorBuilder: (context, error, stack) => _placeholder(),
+      );
     }
-    // Treat everything else as an asset path
-    return Image.asset(s, width: size, height: size, fit: fit);
+
+    // 3️⃣ Local asset path
+    return Image.asset(
+      s,
+      width: size,
+      height: size,
+      fit: fit,
+      errorBuilder: (context, error, stack) => _placeholder(),
+    );
+  }
+
+  /// A simple reusable placeholder (you can customize this)
+  Widget _placeholder() {
+    return Container(
+      width: size,
+      height: size,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color:Colors.green.withValues(alpha: 0.1),
+
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: const Icon(Icons.local_florist, color: Colors.green, size: 36),
+    );
   }
 }
+
 
