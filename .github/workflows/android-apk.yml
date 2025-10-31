@@ -1,10 +1,8 @@
 name: Android Debug APK
-
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,7 +12,13 @@ jobs:
         with:
           channel: stable
       - run: flutter pub get
-      - run: flutter create .   # ensures android/ and web/ exist
+      # Remove or comment out the flutter create line:
+      # - run: flutter create .
+      # Instead, ensure android platform exists without overwriting:
+      - run: |
+          if [ ! -d "android" ]; then
+            flutter create --platforms=android .
+          fi
       - run: flutter build apk --debug
       - uses: actions/upload-artifact@v4
         with:
