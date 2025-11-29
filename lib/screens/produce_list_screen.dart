@@ -18,7 +18,7 @@ class _ProduceListScreenState extends State<ProduceListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Produce Share')),
+      appBar: AppBar(title: const Text('Home')),
       body: FutureBuilder<List<ProduceItem>>(
         future: _future,
         builder: (context, snap) {
