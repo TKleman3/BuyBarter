@@ -1,6 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import '../data/request_repository.dart';
+import '../data/request_model.dart';
+
 
 /// Provide FirebaseAuth instance to the app through Riverpod.
 final firebaseAuthProvider = Provider<FirebaseAuth>((ref) {
@@ -19,4 +22,21 @@ final currentUserIdProvider = Provider<String>((ref) {
     throw StateError('User not signed in');
   }
   return user.uid;
+});
+
+final requestRepositoryProvider = Provider<RequestRepository>((ref) {
+  final db = ref.watch(firestoreProvider);
+  return RequestRepository(db);
+});
+
+
+final sellerRequestsProvider =
+    StreamProvider.family<List<RequestModel>, String>((ref, sellerId) {
+  return ref.watch(requestRepositoryProvider).streamForSeller(sellerId);
+});
+
+
+final buyerRequestsProvider =
+    StreamProvider.family<List<RequestModel>, String>((ref, buyerId) {
+  return ref.watch(requestRepositoryProvider).streamForBuyer(buyerId);
 });
