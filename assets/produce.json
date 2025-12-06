@@ -1,6 +1,7 @@
 [
 {
 "id": "eggs",
+"ownerId": "farmer_john",
 "title": "Farm Eggs",
 "unit": "dozen",
 "quantity": 5,

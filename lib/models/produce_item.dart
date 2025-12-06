@@ -1,5 +1,6 @@
 class ProduceItem {
   final String id;
+  final String ownerId;
   final String title;
   final String unit;
   final double quantity;
@@ -9,6 +10,7 @@ class ProduceItem {
 
   const ProduceItem({
     required this.id,
+    required this.ownerId,
     required this.title,
     required this.unit,
     required this.quantity,
@@ -19,6 +21,7 @@ class ProduceItem {
 
   factory ProduceItem.fromJson(Map<String, dynamic> j) => ProduceItem(
         id: j['id'] as String,
+        ownerId: j['ownerId'] as String,
         title: j['title'] as String,
         unit: j['unit'] as String,
         quantity: (j['quantity'] as num).toDouble(),
