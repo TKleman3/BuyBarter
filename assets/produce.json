@@ -1,13 +1,32 @@
 [
-{
-"id": "eggs",
-"ownerId": "farmer_john",
-"title": "Farm Eggs",
-"unit": "dozen",
-"quantity": 5,
-"price": 4.0,
-"description": "Free-range mixed flock.",
-"image": "assets/images/eggs.png"
-}
-
+  {
+    "id": "eggs",
+    "ownerId": "farmer_john",
+    "title": "Farm Eggs",
+    "unit": "dozen",
+    "quantity": 5,
+    "price": 4.0,
+    "description": "Free-range mixed flock.",
+    "image": "assets/images/eggs.png"
+  },
+  {
+    "id": "squash",
+    "ownerId": "farmer_john",
+    "title": "Summer Squash",
+    "unit": "lb",
+    "quantity": 10,
+    "price": 1.50,
+    "description": "Fresh yellow squash and zucchini, picked this week.",
+    "image": "assets/images/squash.png"
+  },
+  {
+    "id": "raspberries",
+    "ownerId": "farmer_john",
+    "title": "Raspberries",
+    "unit": "pint",
+    "quantity": 8,
+    "price": 5.0,
+    "description": "Sweet red raspberries, picked fresh daily.",
+    "image": "assets/images/raspberries.png"
+  }
 ]
