@@ -14,11 +14,6 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // Auto sign-in anonymously if not already signed in
-  if (FirebaseAuth.instance.currentUser == null) {
-    await FirebaseAuth.instance.signInAnonymously();
-  }
-
   runApp(
     const ProviderScope(
       child: MyApp(),
