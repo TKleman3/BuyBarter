@@ -12,7 +12,16 @@
           "package_name": "com.example.buyrbarter"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "601952715042-9tjbe4a08b4e1n9ll6jhd13so92lu2tu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.buyrbarter",
+            "certificate_hash": "787bc9fc09021c1b287a4c06a902710f7ae8b140"
+          }
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyA9Xhz8vw6DlXcst-Dhx-yMcDLlylLOl_o"
