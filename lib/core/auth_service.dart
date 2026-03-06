@@ -8,7 +8,9 @@ final authServiceProvider = Provider<AuthService>((ref) => AuthService());
 
 class AuthService {
   final _auth = FirebaseAuth.instance;
-  final _googleSignIn = GoogleSignIn();
+  final _googleSignIn = GoogleSignIn(
+    clientId: '601952715042-dphh53cu0tj8cjgd5bls5rp4gunle5ko.apps.googleusercontent.com',
+  );
 
   Future<void> signInWithGoogle(BuildContext context) async {
     try {
