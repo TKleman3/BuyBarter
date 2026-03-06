@@ -22,7 +22,7 @@
           }
         },
         {
-          "client_id": "601952715042-dphh53cu0tj8cjgd5bls5rp4gunle5ko.apps.googleusercontent.com",
+          "client_id": "601952715042-gtvg3j67gs7ttevh9d1vo1j05glbqun1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -37,6 +37,13 @@
             {
               "client_id": "601952715042-dphh53cu0tj8cjgd5bls5rp4gunle5ko.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "601952715042-dsutmbe7ps7c8l8cacrklci2m31gabi9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.buyrbarter"
+              }
             }
           ]
         }
