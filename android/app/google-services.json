@@ -20,6 +20,10 @@
             "package_name": "com.example.buyrbarter",
             "certificate_hash": "787bc9fc09021c1b287a4c06a902710f7ae8b140"
           }
+        },
+        {
+          "client_id": "601952715042-dphh53cu0tj8cjgd5bls5rp4gunle5ko.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
@@ -29,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601952715042-dphh53cu0tj8cjgd5bls5rp4gunle5ko.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
