@@ -12,9 +12,13 @@ jobs:
         with:
           channel: stable
       - run: flutter pub get
-      # Remove or comment out the flutter create line:
-      # - run: flutter create .
-      # Instead, ensure android platform exists without overwriting:
+
+      # Restore YOUR keystore so SHA-1 always matches Firebase
+      - name: Restore debug keystore
+        run: |
+          mkdir -p ~/.android
+          echo "${{ secrets.DEBUG_KEYSTORE_BASE64 }}" | base64 --decode > ~/.android/debug.keystore
+
       - run: |
           if [ ! -d "android" ]; then
             flutter create --platforms=android .
